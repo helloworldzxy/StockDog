@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.jshintrc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gruntfile.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/dashboard.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/watchlist.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/contenteditable.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/stk-sign-color.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/stk-sign-fade.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/stk-stock-row.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/stk-stock-table.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/directives/stk-watchlist-panel.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/company-service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/quote-service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/watchlist-service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/main.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/dashboard.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/templates/addlist-modal.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/templates/addstock-modal.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/templates/stock-table.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/templates/watchlist-panel.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/watchlist.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/.jshintrc" charset="UTF-8" />
+    <file url="file://E:/Professional AngularJS/Source Code/Chapter 1/step-5/Gruntfile.js" charset="UTF-8" />
+    <file url="file://E:/Professional AngularJS/Source Code/Chapter 1/step-5/app/scripts/controllers/watchlist.js" charset="UTF-8" />
+    <file url="file://E:/Professional AngularJS/Source Code/Chapter 1/step-5/app/scripts/directives/stk-stock-row.js" charset="UTF-8" />
+    <file url="file://E:/Professional AngularJS/Source Code/Chapter 1/step-5/app/scripts/services/quote-service.js" charset="UTF-8" />
+    <file url="file://E:/Professional AngularJS/Source Code/Chapter 1/step-5/app/styles/main.css" charset="UTF-8" />
+  </component>
+</project>
