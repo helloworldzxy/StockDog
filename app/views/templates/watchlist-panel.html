@@ -18,7 +18,7 @@
          ng-class="{active: currentList == list.id}"
          ng-repeat="list in watchlists track by $index"
          ng-click="gotoList(list.id)">
-        {{list.name}}}
+        {{list.name}}
         <!--[4]调用deleteList()处理器删除该列表-->
         <button type="button" class="close" ng-click="deleteList(list)">
           &times;
