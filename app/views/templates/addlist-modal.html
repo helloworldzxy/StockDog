@@ -3,8 +3,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <!--[1]在单击时调用$modal.$hide()-->
-        <button type="button" class="close" ng-click="$hide()">&times;
-        </button>
+        <!-- &times;为关闭字符的转义字符 -->
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
         <h4 class="modal-title">Create New Watchlist</h4>
       </div>
       <!--[2]命名该表单用于验证过程-->
@@ -13,6 +13,7 @@
           <div class="form-group">
             <label for="list-name">Name</label>
             <!--[3]将输入绑定到watchlist.name-->
+            <!-- stk-watchlist-panel.js中有$scope.watchlist，这个变量在watchlist-panel.html addlist-modal.html中都可以访问到，还有$scope.createList()函数这里也可以访问到-->
             <input type="text"
                    class="form-control"
                    id="list-name"

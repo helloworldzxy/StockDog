@@ -60,7 +60,8 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*!/}*.html',
+          '<%= yeoman.app %>/**/*.html', //监视app/views目录中所有.html文件的改动
+          // '<%= yeoman.app %>/{,*!/}*.html', //只监视顶级app/views中的.html文件的改动
           /*'<%= yeoman.app %>/!**!/!*!/html',*/
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
