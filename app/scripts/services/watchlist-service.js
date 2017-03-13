@@ -4,6 +4,7 @@ angular.module('stockDogApp')
 //.service()将该服务注册在顶级模块stockDogApp上，使其他位置也可以引用该服务。
   .service('WatchlistService', function WatchlistService() { 
     // Augment Stocks with additional helper functions
+    //使用额外的辅助函数增强股票
     var StockModel = {
       save: function () {
         var watchlist = findById(this.listId);
@@ -15,12 +16,12 @@ angular.module('stockDogApp')
     // Augment Watchlists with additional helper functions
     var WatchlistModel = {
       addStock: function (stock) {
-        var existingStock = _.find(this.stocks, function (s) {
+        var existingStock = _.find(this.stocks, function (s) { //待添加的新stock与已有的this.stocks逐一比较,返回找到的第一个
           return s.company.symbol === stock.company.symbol;
         });
-        if (existingStock) {
+        if (existingStock) { //若已存在于this.stocks中，则相应shares增加即可
           existingStock.shares += stock.shares;
-        } else {
+        } else {  //若尚未存在于this.stocks中，则添加该Stock到StockModel中？并push进this.stocks
           _.extend(stock, StockModel);
           this.stocks.push(stock);
         }
@@ -53,9 +54,9 @@ angular.module('stockDogApp')
       var model = { //从localStorage中获取存储的监视列表watchlists和对应的Id
         //localStorage中存储的数据使用以StockDog为命名空间的键，避免潜在冲突
         watchlists: localStorage['StockDog.watchlists'] ?
-          JSON.parse(localStorage['StockDog.watchlists']) : [],
+          JSON.parse(localStorage['StockDog.watchlists']) : [], //JSON.parse反序列化 在内存中创建管理应用所需的适当数据结构
         nextId: localStorage['StockDog.nextId'] ?
-          parseInt(localStorage['StockDog.nextId']) : 0
+          parseInt(localStorage['StockDog.nextId']) : 0 
       };
       _.each(model.watchlists, function (watchlist) { //lodash函数式编程工具库 _.each -> _.forEach
         _.extend(watchlist, WatchlistModel); //_.extend -> _.assign,遍历并继承来源对象的属性
@@ -69,7 +70,7 @@ angular.module('stockDogApp')
     // Helper: Save watchlists to localStorage
     //先将watchlist数组内容字符化（localStorage只能存储字符串），然后持久化存储到localStorage中。
     var saveModel = function () {
-      localStorage['StockDog.watchlists'] = JSON.stringify(Model.watchlists);
+      localStorage['StockDog.watchlists'] = JSON.stringify(Model.watchlists); //JSON.stringify序列化
       localStorage['StockDog.nextId'] = Model.nextId;
     };
 

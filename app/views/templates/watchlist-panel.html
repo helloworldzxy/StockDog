@@ -16,6 +16,8 @@
     <div class="list-group">
       <!--[3]重复监视列表中的每个列表，并创建链接-->
       <!-- 遍历list数组的语法：ng-repeat,track by $index 数组中有重复对象时方便遍历 -->
+      <!-- ng-click: 路由到相应的list.id对应的watchlist -->
+      <!-- ng-class: bootstrap的active类添加到当前正在查看的watchlist-->
       <a class="list-group-item"
          ng-class="{active: currentList == list.id}"
          ng-repeat="list in watchlists track by $index" 

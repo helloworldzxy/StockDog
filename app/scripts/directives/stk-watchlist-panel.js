@@ -8,10 +8,10 @@ angular.module('stockDogApp')
       templateUrl: 'views/templates/watchlist-panel.html',
       restrict: 'E', //指令被限制为只能用作元素
       scope: {}, //隔离指令的作用域(使所有附加到$scope变量的值只在该指令上下文中可用)
-      link: function ($scope) {
+      link: function ($scope) { //$scope用于追踪当前正在显示的监视列表
         // Initialize variables
         $scope.watchlist = {};
-        $scope.currentList = $routeParams.listId; //?
+        $scope.currentList = $routeParams.listId; //在$scope上添加,用于计算active类在元素中是否存在
         var addListModal = $modal({ //$modal是AngularStrap公开的服务
           scope: $scope,
           templateUrl: 'views/templates/addlist-modal.html', //将在Bootstrap模态框中渲染该template
@@ -41,7 +41,7 @@ angular.module('stockDogApp')
         };
 
         // Send users to desired watchlist view
-        $scope.gotoList = function (listId) {
+        $scope.gotoList = function (listId) {//参数来自：在watchlist-panel.html中的ng-click中调用gotoList时传入
           $location.path('watchlist/' + listId);
         };
       } //end of link function

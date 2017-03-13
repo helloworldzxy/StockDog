@@ -56,18 +56,18 @@ angular.module('stockDogApp')
       var url = BASE + '?' + 'q=' + query + '&format=json&diagnostics=true' +
           '&env=http://datatables.org/alltables.env';
       $http.jsonp(url + '&callback=JSON_CALLBACK')
-        .success(function(data){
+        .success(function (data){
           if(data.query.count){
             var quotes = data.query.count > 1 ?
               data.query.results.quote : [data.query.results.quote];
             update(quotes);
           }
         })
-        .error(function(data){
+        .error(function (data){
           console.log(data);
         });
 
     };
     //[4]用于每5秒抓取一次新的报价数据
-    $interval(this.fetch, 2000);
+    $interval(this.fetch, 5000);
   });

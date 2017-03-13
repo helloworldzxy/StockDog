@@ -9,9 +9,10 @@
 
       <form role="form" id="add-stock" name="stockForm">
         <div class="modal-body">
+
           <div class="form-group">
             <label for="stock-symbol">Symbol</label>
-            <!--[1]浣跨敤鍚湁鏍囩璇硶鐨刵g-options鍜宐s-typeahead鎸囦护-->
+            <!--[1]使用含有标签语法的ng-options和bs-typeahead指令-->
             <input type="text"
                    class="form-control"
                    id="stock-symbol"
@@ -21,7 +22,8 @@
                    bs-typeahead
                    required>
           </div>
-          <!--[2]鍙帴鍙楁墍鎷ユ湁鑲＄エ鐨勬暟閲�-->
+
+          <!--[2]只接受所拥有股票的数量-->
           <div class="form-group">
             <label for="stock-shares">Shares Owned</label>
             <input type="number"
@@ -31,7 +33,8 @@
                    ng-model="newStock.shares"
                    required>
           </div>
-        </div>
+        </div> <!-- end of modal-body -->
+
 
         <div class="modal-footer">
           <button type="submit"

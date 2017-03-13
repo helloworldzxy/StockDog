@@ -7,10 +7,10 @@
       <td>Price Change
         <span> (
           <!--[1]在单击时改变showPercent的值-->
-          <span ng-disabled="showPercent === true">
+          <span ng-disabled="showPercent === false">
             <a ng-click="showPercent = !showPercent">$</a>
           </span>|
-          <span ng-disabled="showPercent === false">
+          <span ng-disabled="showPercent === true">
             <a ng-click="showPercent = !showPercent">%</a>
           </span>)
         </span>
