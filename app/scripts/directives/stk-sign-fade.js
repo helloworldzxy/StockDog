@@ -7,7 +7,7 @@
  * # stkSignFade
  */
 angular.module('stockDogApp')
-  .directive('stkSignFade', function ($animate) {
+  .directive('stkSignFade', function ($animate) {//ngAnimate模块提供的$animate服务
     return {
       restrict: 'A',
       link: function ($scope, $element, $attrs) {

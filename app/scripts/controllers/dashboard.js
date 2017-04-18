@@ -12,8 +12,8 @@ angular.module('stockDogApp')
     //[1]初始化
     var unregisterHandlers = [];
     $scope.watchlists = WatchlistService.query();
-    $scope.cssStyle = 'height:300px';
-    var formatters = {
+    $scope.cssStyle = 'height:300px'; //定义图表样式
+    var formatters = { //定义图表格式选项
       number: [
         {
           columnNum: 1,
@@ -63,7 +63,7 @@ angular.module('stockDogApp')
 
     //[4]用于重置控制器状态的辅助函数
     var reset = function(){
-      //[5]在注册新的股票之前清除QuoteService
+      //[5]清除QuoteService之后重新注册新的股票
       QuoteService.clear();
       _.each($scope.watchlists, function(watchlist){
         _.each(watchlist.stocks, function(stock){
@@ -71,12 +71,12 @@ angular.module('stockDogApp')
         });
       });
 
-      //[6]在创建新的$watch监听器之前，注销现有$watch监听器
+      //[6]注销现有$watch监听器之后创建新的$watch监听器
       _.each(unregisterHandlers, function(unregister){
         unregister();
       });
       _.each($scope.watchlists, function(watchlist){
-        var unregister = $scope.$watch(function(){
+        var unregister = $scope.$watch(function(){ //创建新的$watch监听器
           return watchlist.marketValue;
         }, function(){
           recalculate();
